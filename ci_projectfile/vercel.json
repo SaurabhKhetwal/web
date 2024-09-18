@@ -1,0 +1,18 @@
+{
+    "builds": [
+      {
+        "src": "ci_projectfile/wsgt.py",
+        "use": "@vercel/python",
+        "config": {
+          "maxLambdasize": "15mb",
+          "runtime": "python3.9"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "ci_projectfile/wsgi.py"
+      }
+    ]
+  }
